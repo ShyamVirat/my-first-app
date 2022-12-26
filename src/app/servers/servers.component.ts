@@ -13,6 +13,7 @@ throw new Error('Method not implemented.');
   serverCreateStatus ="No server created";
   serverCreated= false;
   serverName ="TestServe";
+  servers =["Testserver1","MyTestServer2"];
   constructor(){
     setTimeout(()=>{
       this.allowNewServer =true;
@@ -25,6 +26,7 @@ throw new Error('Method not implemented.');
 
    onCreateServer(){
     this.serverCreated= true;
+    this.servers.push(this.serverName);
     this.serverCreateStatus ="Server was created! Name is" + this.serverName;
    }
    onUpdateServerName(event:any){
